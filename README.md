@@ -10,3 +10,5 @@ This will install all the dependencies for our express application.
 `npm start`
 
 This might be changed in the future
+
+Read over the express example app to learn more about javascript :)
