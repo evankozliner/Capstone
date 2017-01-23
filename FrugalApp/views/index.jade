@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  <p>Hi</p>
+  #SearchContainer
+    h1= name_v
+    h5 Finding the financial information you need
+    form.form-inline
+      .form-group
+        input#SeachInput.form-control
+        button.btn Search

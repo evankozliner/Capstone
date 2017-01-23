@@ -1,0 +1,11 @@
+#MainContainer {
+  height:400px;
+}
+
+#SearchContainer {
+  min-height: 100px;
+  margin-top: 150px;
+  text-align: center;
+}
+
+
