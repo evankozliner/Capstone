@@ -1,6 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  <p>Hi</p>
+  #SearchContainer
+    h1= name_v
+    h5 Finding the financial information you need
+    #search.form-group
+      input#SearchInput(v-model="query", type="text")
+      button.btn(type="submit") Search
+      p {{ query }}
+

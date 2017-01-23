@@ -1,8 +1,25 @@
+- var name_v =  "Frügal"
+
 doctype html
 html
   head
-    title= title
+    title= name_v
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
   body
-    block content
+    //Navigation tabs
+    nav(role='navigation')
+      ul.nav.nav-tabs
+        li.active
+         a(href='#') Search
+        li
+         a(href='#') About #{name_v}
+        li
+          a(href='#') What's Coming?
 
+    #MainContainer.container
+      block content
+
+script(src='/javascripts/main.js')
