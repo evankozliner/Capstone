@@ -4,7 +4,8 @@ block content
   #SearchContainer
     h1= name_v
     h5 Finding the financial information you need
-    form.form-inline
-      .form-group
-        input#SeachInput.form-control
-        button.btn Search
+    #search.form-group
+      input#SearchInput(v-model="query", type="text")
+      button.btn(type="submit") Search
+      p {{ query }}
+
