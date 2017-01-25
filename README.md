@@ -69,7 +69,7 @@ There are 4 stages to this process: Adding files, committing files, pushing file
 
 `git add README.md`
 
-By adding files we tell Git that we want to commit these files. Not all the files we've been working on will be ready for out peers to see. To make sure we have all the files we want to commit we can run `git status` again:
+By adding files we specify which files will be added to our history when we commit. Not all the files we've been working on will be ready for out peers to see. To make sure we have all the files we want to commit we can run `git status` again:
 
 ```
 On branch test
