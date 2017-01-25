@@ -12,3 +12,4 @@ This will install all the dependencies for our express application.
 This might be changed in the future
 
 Read over the express example app to learn more about javascript :)
+hi
