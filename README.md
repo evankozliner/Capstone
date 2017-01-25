@@ -22,7 +22,7 @@ If you want to contribute to the front-end take a look at these pages for docume
 # Making a new Change / Micro Git Workflow Tutorial
 So you want to make a change or add a feature! Good! Here is the workflow:
 
-1. Pull the latest changes down
+###1. Pull the latest changes down
 
 This will ensure that you're working with the latest version of the code base. You should *always* try to do this before you start working so you don't end up using old code and needing to rewrite your work.
 
@@ -36,7 +36,7 @@ Notice the `--rebase` option here. This is optional, but it can provide a cleane
 
 It's worth noting that this will need to be done again if you change branches. 
 
-2. Create a branch
+###2. Create a branch
 
 `git checkout -b my_new_feature` ***or*** `git branch my_new_feature` followed by `git checkout my_new_feature`
 
@@ -44,7 +44,7 @@ The first command is a more compact version of the two mentioned after it. Creat
 
 By creating a new branch we have now made our change independent from the (working) master code. This seperation is to make sure that we *always have a working copy of the project*. 
 
-3. Make some changes
+###3. Make some changes
 
 Now you can edit your files without fear that you will mess up other people's code. 
 
@@ -62,7 +62,7 @@ Changes not staged for commit:
 
 Here we can see I have edited the README.md file.
 
-4. Push those changes
+###4. Push those changes
 It's good to get feedback early and often! So I want to show off my changes for peer review. 
 
 There are 4 stages to this process: Adding files, committing files, pushing files for review, and pulling files into master.
@@ -106,7 +106,7 @@ Now we're ready to show everyone else our feature. Lets push our local branch to
 
 This will push our changes into our own personal remote branch.
 
-5. Get feedback
+###5. Get feedback
 
 Now when you visit the [repository](https://github.com/evankozliner/Capstone) you'll notice that git has prompted you to pull against master. 
 
