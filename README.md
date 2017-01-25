@@ -18,3 +18,8 @@ Using `nodemon` instead of `npm start` allows the server to restart itself when 
 This might be changed in the future
 
 Read over the express example app to learn more about javascript :)
+
+## View Rendering Documentation
+We're using [express-vue](https://www.npmjs.com/package/express-vue) to render our [vue.js](https://vuejs.org/) pages. 
+
+If you want to contribute to the front-end take a look at these pages for documentation.
