@@ -2,6 +2,7 @@
 A financial application utilizing watson
 
 # Before you start contributing you'll need this to work
+`cd FrugalApp`
 `npm install`
 
 This will install all the dependencies for our express application.
