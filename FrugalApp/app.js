@@ -4,15 +4,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-var index = require('./routes/index');
-var users = require('./routes/users');
-
+var expressVue = require('express-vue')
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// View engine setup
+app.engine('vue', expressVue);
+app.set('view engine', 'vue');
+app.set('views', __dirname + '/views');
+app.set('vue', {
+    componentsDir: __dirname + '/views/components',
+    defaultLayout: 'layout'
+});
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -22,14 +24,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var index = require('./routes/index');
 app.use('/', index);
-app.use('/users', users);
 
 // Canned answer routes
 // =============================================================================
 var routerGeneralInfo = express.Router();              // get an instance of the express Router
 var routerRecommendation = express.Router();              // get an instance of the express Router
 
+// TODO Add api routes to a sepearte file
 // test routes to make sure everything is working (accessed at GET http://localhost:3000/api
 // and http://localhost:3000/api2)
 routerGeneralInfo.get('/', function(req, res) {
@@ -52,7 +55,6 @@ routerRecommendation.get('/', function(req, res) {
 app.use('/api', routerGeneralInfo);
 app.use('/api2', routerRecommendation);
 
-// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
