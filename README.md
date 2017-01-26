@@ -40,7 +40,9 @@ Test features, run unit test, read through the code etc.
 Be sure to be specific!
 
 ###5. When everything is working, merge their pull request or wait for more of your peers to review
+Don't forget to go back to the branch you were working on:
 
+`git checkout branch-you-were-working-on-previously`
 
 # Making a new Change / Micro Git Workflow Tutorial
 So you want to make a change or add a feature! Good! Here is the workflow:
