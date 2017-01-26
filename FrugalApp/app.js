@@ -32,6 +32,7 @@ app.use('/', index);
 var routerGeneralInfo = express.Router();              // get an instance of the express Router
 var routerRecommendation = express.Router();              // get an instance of the express Router
 
+// TODO Add api routes to a sepearte file
 // test routes to make sure everything is working (accessed at GET http://localhost:3000/api
 // and http://localhost:3000/api2)
 routerGeneralInfo.get('/', function(req, res) {
@@ -54,7 +55,7 @@ routerRecommendation.get('/', function(req, res) {
 app.use('/api', routerGeneralInfo);
 app.use('/api2', routerRecommendation);
 
-// catch 404 and forward to error handler
+// TODO add vue based error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
