@@ -55,7 +55,6 @@ routerRecommendation.get('/', function(req, res) {
 app.use('/api', routerGeneralInfo);
 app.use('/api2', routerRecommendation);
 
-// TODO add vue based error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
