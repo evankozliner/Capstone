@@ -5,8 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', {
     data: {
-        title: 'Fruugal',
-        message: 'What is the stock price of apple?'
+        title: 'Früügal',
+        message: 'Enter your question here.'
     },
     vue: {}
   });

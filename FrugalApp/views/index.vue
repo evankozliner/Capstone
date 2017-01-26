@@ -1,10 +1,22 @@
 <template lang="html">
-    <div>
+    <div align="center">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
         <h1>{{title}}</h1>
-        <p>Welcome to Fruugal. Your personal financial advisor. To begin, ask a question::</p>
+        <p>Welcome to Früügal. Your personal financial advisor. To begin, ask a question:</p>
         <input v-model="message" placeholder="edit me">
         <message :message="message"></message>
-        <button @click="askWatson">Reverse Message</button>
+        <button @click="askWatson">Search Now!</button>
         <br>
         <span id="response"></span>
     </div>
@@ -21,10 +33,9 @@ export default {
         console.log("Asking Watson!");
         $.get('api/', function(res) {
           console.log(res);
-          $("#response").append(res.price);
+          $("#response").text(res.price);
         });
       }
     }
 }
 </script>
-
