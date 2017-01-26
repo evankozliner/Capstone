@@ -19,6 +19,29 @@ We're using [express-vue](https://www.npmjs.com/package/express-vue) to render o
 
 If you want to contribute to the front-end take a look at these pages for documentation.
 
+# Reviewing other people's branches to be sure their code works
+
+###1. Fetch the remote branch your teammates code is on
+`git fetch`
+
+###2. Change your branch to be your teammates branch. You should be able to find its name on the Branches dropdown on the Github website or on the pull request you are viewing. 
+
+`git checkout your-teammates-branch`
+```
+Branch your-teammates-branch set up to track remote branch your-teammates-branch from origin.
+Switched to a new branch 'Josh-Branch'
+```
+You'll get a message similar to the one above when you've successfully checked out his / her branch
+
+###3. Make sure their code is functioning
+Test features, run unit test, read through the code etc.
+
+###4. Comment on anything that isn't working on their pull request
+Be sure to be specific!
+
+###5. When everything is working, merge their pull request or wait for more of your peers to review
+
+
 # Making a new Change / Micro Git Workflow Tutorial
 So you want to make a change or add a feature! Good! Here is the workflow:
 
