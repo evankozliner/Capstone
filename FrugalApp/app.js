@@ -25,6 +25,33 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
+// Canned answer routes
+// =============================================================================
+var routerGeneralInfo = express.Router();              // get an instance of the express Router
+var routerRecommendation = express.Router();              // get an instance of the express Router
+
+// test routes to make sure everything is working (accessed at GET http://localhost:3000/api
+// and http://localhost:3000/api2)
+routerGeneralInfo.get('/', function(req, res) {
+    res.json({ name: 'Apple',
+               nasdaq: 'AAPL',
+               price: 121.85,
+               change: '+1.88',
+               CEO: 'Tim Cook'});   
+});
+
+routerRecommendation.get('/', function(req, res) {
+    res.json({ name: 'Apple',
+               nasdaq: 'AAPL',
+               recommendation: 'Sell',
+               confidence: '85.9%'});   
+});
+
+// REGISTER OUR ROUTES -------------------------------
+// all of our routes will be prefixed with /api
+app.use('/api', routerGeneralInfo);
+app.use('/api2', routerRecommendation);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
