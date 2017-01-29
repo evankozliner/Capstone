@@ -1,17 +1,5 @@
 <template lang="html">
-    <div align="center">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+    <div>
         <h1>{{title}}</h1>
         <p>Welcome to Früügal. Your personal financial advisor. To begin, ask a question:</p>
         <input v-model="message" placeholder="edit me">
