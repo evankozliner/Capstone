@@ -7,6 +7,7 @@
            <script src="https://unpkg.com/vue/dist/vue.js"></script>
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
            <link href="../../stylesheets/style.css" rel="stylesheet">
+           <title>Früügal</title>
         </head>
         <body>
             {{{app}}}

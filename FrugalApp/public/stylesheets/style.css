@@ -1,12 +1,16 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-background {
-  color: navy;
+  background-color: #2E86AB;
 }
 
 h1 {
-  color: yellow;
+  color: #B7B6B5;
+}
+
+div {
+  margin: auto;
+  text-align: center;
+  color: #f6f5ae;
+  padding: 225px 0;
 }

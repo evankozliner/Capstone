@@ -23,8 +23,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('FrugalApp/public/javascripts', express.static(path.join(__dirname, 'FrugalApp/public/javascripts')));
-app.use('FrugalApp/public/stylesheets', express.static(path.join(__dirname, 'FrugalApp/public/stylesheets')));
 
 var index = require('./routes/index');
 app.use('/', index);
