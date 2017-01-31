@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var http = require('http');
+var request=require('request');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -33,11 +35,22 @@ var routerRecommendation = express.Router();              // get an instance of 
 // test routes to make sure everything is working (accessed at GET http://localhost:3000/api
 // and http://localhost:3000/api2)
 routerGeneralInfo.get('/', function(req, res) {
-    res.json({ name: 'Apple',
+	 var host = 'http://dev.markitondemand.com';
+  	 var pathGeneral = '/MODApis/Api/v2/Lookup/json?input=apple';
+  	 var pathStock = '/MODApis/Api/v2/Quote/json?symbol=aapl';
+  		
+  	request(host + pathGeneral, function(err, res2, body) {
+  		console.log(body);
+  		res.json(JSON.parse(body));
+  	});
+	
+    /*res.json({ name: 'Apple',
                nasdaq: 'AAPL',
                price: 121.85,
                change: '+1.88',
-               CEO: 'Tim Cook'});   
+               CEO: 'Tim Cook'});*/
+    //console.log(responseJSON);     
+    //res.json(responseJSON);
 });
 
 routerRecommendation.get('/', function(req, res) {
